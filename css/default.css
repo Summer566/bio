@@ -1,0 +1,67 @@
+.htmleaf-container{
+	height:40%;
+ 	width:80%;
+ 	top:30%;
+ 	left:10%;
+ 	position: absolute;	
+ 	overflow: hidden;
+}
+
+.circle{
+	display: inline;
+	text-align: center;
+	overflow: hidden;
+	margin: 20px;
+}
+.btn{width:120px;height:50px;margin: 30px 12px;padding: 0.6em 1em;border: 3px solid #7B68EE;font-size: 20px;background-color: #fff;color: black;text-align: center;}
+
+.hint { position: relative; display: inline-block; }
+
+.hint:before, .hint:after {
+			position: absolute;
+			opacity: 0;
+			z-index: 1000000;
+			-webkit-transition: 0.3s ease;
+			-moz-transition: 0.3s ease;
+  pointer-events: none;
+}		
+.hint:hover:before, .hint:hover:after {
+	opacity: 1;
+}
+.hint:before {
+	content: '';
+	position: absolute;
+	background: transparent;
+	border: 6px solid transparent;
+	
+}	
+.hint:after {
+	content: attr(data-hint);
+	background: rgba(154, 231, 245, 0.8);
+			color: white;
+			padding: 8px 20px;
+			font-size: 16px;
+	white-space: nowrap;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* default: bottom */
+
+.hint-bottom:before {
+	top: 100%;
+	left: 50%;
+	margin: -14px 0 0 0;
+	border-bottom-color: rgba(154, 231, 245, 0.8);
+}	
+.hint-bottom:after {
+	top: 100%;
+	left: -100%;
+	margin: -10px 0 0 -10px;
+}
+.hint-bottom:hover:before {
+	margin-top: 0px;
+}
+.hint-bottom:hover:after {
+	margin-top: 12px;
+}
+
